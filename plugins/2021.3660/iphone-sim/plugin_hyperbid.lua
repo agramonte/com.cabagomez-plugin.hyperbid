@@ -23,6 +23,22 @@ function lib.init()
     showWarning("hyperbid.init()")
 end
 
+function lib.show()
+    showWarning("hyperbid.show()")
+end
+
+function lib.isAvailable()
+    showWarning("hyperbid.isAvailable()")
+end
+
+function lib.hide()
+    showWarning("hyperbid.hide()")
+end
+
+function lib.load()
+    showWarning("hyperbid.load()")
+end
+
 -------------------------------------------------------------------------------
 -- END
 -------------------------------------------------------------------------------
