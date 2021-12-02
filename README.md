@@ -10,8 +10,16 @@ https://dashboard.tappx.com/?h=a386595d4c1005fd21b82c8a44d45766.
 
 Integration steps:   
 1. Register for Hyperbid https://app.hyperbid.com.   
+2. Add the plugin to your build settings:    
+```
+    ["plugin.hyperbid"] = 
+        {
+            publisherId = "com.cabagomez"
+        }
 
-2. For iOS add plist:   
+```   
+Also please make sure to add any other required entries based on the networks you select.   
+3. For iOS add plist:   
 ```
 plist = {
             NSAppTransportSecurity = { NSAllowsArbitraryLoads=true },
@@ -22,15 +30,15 @@ plist = {
             },
 }
 ```   
-3. Plugin supports Android 21 and above. Add to your build settings file:
+4. Plugin supports Android 21 and above. Add to your build settings file:
 ```
 minSdkVersion = "21",
 ```   
-4. Refrence the plugin:
+5. Refrence the plugin:
 ```
 local hyperbid = require( "plugin.hyperbid" )
 ```   
-5. Init. 
+6. Init. 
 ```
 hyperbid.init(
     adListerner, -- Listerner. Required.
@@ -47,7 +55,7 @@ hyperbid.init(
         } -- Table with options.
     )
 ```   
-6. Show.
+7. Show.
 ```
     hyperbid.show("<adtype>", -- Ad type. Valid values are: "interstitial", "rewardedVideo", "banner"      {
             y=<bannerPosition>, -- Optional. Valid for banner. Valid values are "top" and "bottom". Defaults to "bottom".
@@ -56,16 +64,16 @@ hyperbid.init(
     )
 ```
 
-7. Is Available.
+8. Is Available.
 ```
     hyperbid.isAvailable("<adtype>") -- Ad type. Valid values are: "interstitial", "banner", "rewardedVideo".
 ```  
-8. Hide.
+9. Hide.
 ```
     hyperbid.hide() -- Only functions for banner.
 ```
 
-9. Load.
+10. Load.
 ```
    hyperbid.load( "<adType>", -- Ad type. Valid values are: "interstitial", "banner", "rewardedVideo".
         {
