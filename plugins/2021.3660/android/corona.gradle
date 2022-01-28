@@ -27,11 +27,6 @@ repositories {
         url "https://s01.oss.sonatype.org/content/groups/staging/"
     }
 
-    //Ironsource
-    maven {
-        url "https://android-sdk.is.com/"
-    }
-
 }
 
 dependencies {
@@ -89,10 +84,6 @@ dependencies {
     api "com.hyperbid.sdk:adapter-inmobi:5.7.78"
     api "com.inmobi.monetization:inmobi-ads:9.2.1"
     api "com.squareup.picasso:picasso:2.71828"
-
-    //Ironsource
-    api "com.hyperbid.sdk:adapter-ironsource:5.7.78"
-    api "com.ironsource.sdk:mediationsdk:7.1.10"
 
     //Tappx
     implementation 'com.tappx.sdk.android:tappx-sdk:3.1.17'
