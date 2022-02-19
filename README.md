@@ -6,7 +6,9 @@ Please note:
 2. This plugin is not the official HyperBid plugin. I imagine that at somepoint they'll release a solar2d version since they have supported solar2d for a very long time.   
 3. The iOS plugin with Unity enabled crashes on devices running anything under iOS 10. I have a segment set up for devices under iOS 10 and exclude Unity.   
 4. Tappx only available on Android and only for banner. If you use it and have not registered please use my affiliate link:
-https://dashboard.tappx.com/?h=a386595d4c1005fd21b82c8a44d45766.   
+https://dashboard.tappx.com/?h=a386595d4c1005fd21b82c8a44d45766.  
+5. StartIO is now a possible mediation provider on Android and Amazon. If you use it and have not registered please use my affiliate link:
+https://portal.start.io/#/signup?referredby=b7977c81-d3e2-4b3d-b539-96dd6cffbcdc&preferredsite=pub&source=directURL 
 
 Integration steps:   
 1. Register for Hyperbid https://app.hyperbid.com.   
@@ -93,7 +95,7 @@ AdColony add these schemes (iOS only):
 ```   
 
 iOS mediation networks:   
-    HyperBidBanner:5.7.79   	
+    HyperBidBid:5.7.79   	
     AdColony:4.7.2     
     AppLovinSDK:10.3.5     
     Chartboost / Helium :8.4.2 / 2.3.1   
@@ -105,50 +107,29 @@ iOS mediation networks:
     GoogleMobileAds:8.10.0   
 
 Android mediation networks:   
-    com.hyperbid.sdk:core:5.7.78   
+    HyperBid:5.7.78   
+    Facebook:6.8.0  
+    Admob:19.8.0   
+    Applovin:10.3.4   
+    Unity:3.7.5   
+    Chartboost:8.2.1 / Helium:2.2.1   
+    Vungle:6.10.3   
+    Tappx:3.1.17   
+    AdColony:4.6.5      
+    Inmobi:10.0.3   
+    Pangle:3.9.0.5   
+    StartApp:4.8.11   
 
-    //Facebook    
-    com.hyperbid.sdk:adapter-facebook:5.7.78   
-    com.facebook.android:audience-network-sdk:6.7.0   
-
-    //Admob   
-    com.hyperbid.sdk:adapter-admob:5.7.78   
-    com.google.android.gms:play-services-ads:20.3.0"    
-
-    //AppLovin    
-    com.hyperbid.sdk:adapter-applovin:5.7.78      
-    com.applovin:applovin-sdk:10.3.4"    
-
-    //UnityAds   
-    com.hyperbid.sdk:adapter-unityads:5.7.78   
-    com.unity3d.ads:unity-ads:3.7.5"   
-
-    //Chartboost   
-    com.hyperbid.sdk:adapter-chartboost:5.7.78   
-    com.chartboost:chartboost-sdk:8.2.1   
-    com.chartboost:helium:2.2.1   
-
-    //Vungle    
-    com.hyperbid.sdk:adapter-vungle:5.7.78   
-    com.vungle:publisher-sdk-android:6.10.2   
-
-    //Inmobi   
-    com.hyperbid.sdk:adapter-inmobi:5.7.78   
-    com.inmobi.monetization:inmobi-ads:9.2.1  
-
-    //Ironsource   
-    com.hyperbid.sdk:adapter-ironsource:5.7.78   
-    com.ironsource.sdk:mediationsdk:7.1.10   
-
-    //AdColony
-    com.hyperbid.sdk:adapter-adcolony:5.7.78   
-    com.adcolony:sdk:4.6.4   
-
-    //Tappx
-    Custom Adapter
-    
-
-
+Kindle mediation networks:   
+    HyperBid:5.7.78    
+    Facebook:6.8.0  
+    Admob:19.8.0   
+    Chartboost:8.2.1/Helium:2.2.1      
+    Vungle:6.10.3   
+    AdColony:4.6.5      
+    Inmobi:10.0.3   
+    Pangle:3.9.0.5   
+    StartApp:4.8.11     
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
