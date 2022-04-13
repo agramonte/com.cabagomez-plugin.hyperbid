@@ -43,6 +43,7 @@ FOUNDATION_EXPORT NSString *const ADCUserEducationGraduateDegree;
  AdColonyUserMetadata objects are used to provide AdColony with per-user, non-personally-identifiable information for ad targeting purposes.
  Note that providing non-personally-identifiable information using this API will improve targeting and unlock improved earnings for your app.
  */
+__attribute__((deprecated(("Deprecated in v4.7.0"))))
 @interface AdColonyUserMetadata : NSObject
 
 /** @name Pre-defined Aspects of User Metadata */

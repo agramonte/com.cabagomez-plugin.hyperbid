@@ -61,6 +61,7 @@ FOUNDATION_EXPORT NSString *const ADC_COPPA;
  The common usage scenario is to instantiate and configure one of these objects and then pass it to `configureWithAppID:zoneIDs:options:completion:`.
  Set the properties below to configure a pre-defined option. Note that you can also pass arbitrary options using the AdColonyOptions API.
  Also note that you can also reset the current options object the SDK is using by passing an updated object to `setAppOptions:`.
+ This class in NOT thread safe.
  @see AdColonyOptions
  @see [AdColony setAppOptions:]
  */

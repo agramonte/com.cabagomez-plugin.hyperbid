@@ -38,6 +38,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)unsubscribe:(id<ALCSubscriber>)subscriber forTopics:(NSArray<NSString *> *)topics;
 
 /**
+ * @return @c YES if the SDK will handle a published @c ALCMessage for a given @c topic.
+ */
+- (BOOL)respondsToTopic:(NSString *)topic;
+
+/**
  * The messaging service for the communicator SDK responsible for relaying messages within the system.
  */
 @property (nonatomic, strong, readonly) ALCMessagingService *messagingService;

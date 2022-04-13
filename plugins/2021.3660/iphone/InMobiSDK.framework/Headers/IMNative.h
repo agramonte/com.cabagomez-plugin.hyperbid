@@ -8,8 +8,8 @@
  * Use this class to integrate native ads in your application. For native ads, your application is given the raw assets for the ad. Your application can render these in a manner that is native to the look and feel of your application to drive better user engagement with the ad. If you need to customize aspects of ad impression and click-through reporting, your application can use the IMCustomNative class.
  */
 #import <Foundation/Foundation.h>
-#include "IMCommonConstants.h"
-#import "IMNativeDelegate.h"
+#import <InMobiSDK/IMCommonConstants.h>
+#import <InMobiSDK/IMNativeDelegate.h>
 
 @interface IMNative : NSObject
 /**
@@ -70,7 +70,10 @@
  * A unique identifier for the creative.
  */
 @property (nonatomic, strong, readonly) NSString* creativeId;
-
+/**
+ * contentUrl for OMSDK
+ */
+@property (nonatomic, strong) NSString* contentUrl;
 /**
  * init and new methods are unavailable for this class
  * use "initWithPlacementId:" or "initWithPlacementId:delegate:" method.

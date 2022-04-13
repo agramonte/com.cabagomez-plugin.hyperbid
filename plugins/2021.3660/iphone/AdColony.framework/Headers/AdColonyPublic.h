@@ -1,14 +1,15 @@
-#import <AdColony/AdColonyAdOptions.h>
-#import <AdColony/AdColonyAdRequestError.h>
-#import <AdColony/AdColonyAppOptions.h>
-#import <AdColony/AdColonyEventTracker.h>
-#import <AdColony/AdColonyInterstitial.h>
-#import <AdColony/AdColonyNativeAdView.h>
-#import <AdColony/AdColonyAdView.h>
 #import <AdColony/AdColonyAdSize.h>
-#import <AdColony/AdColonyUserMetadata.h>
-#import <AdColony/AdColonyZone.h>
 #import <Foundation/Foundation.h>
+
+@class AdColonyAdOptions;
+@class AdColonyAdRequestError;
+@class AdColonyAppOptions;
+@class AdColonyInterstitial;
+@class AdColonyZone;
+
+@protocol AdColonyAdViewDelegate;
+@protocol AdColonyAdViewAdvancedDelegate;
+@protocol AdColonyInterstitialDelegate;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,6 +19,24 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AdColony : NSObject
 
 /** @name Starting AdColony */
+
+- (instancetype)init NS_UNAVAILABLE;
+
+/**
+ @abstract Configures AdColony specifically for your app; required for usage of the rest of the API.
+ @discussion This method returns immediately; any long-running work such as network connections are performed in the background.
+ AdColony does not begin preparing ads for display or performing reporting until after it is configured by your app.
+ The required appID parameter for this method can be created and retrieved at the [Control Panel](http://clients.adcolony.com).
+ If appID is `nil`, app will be unable to play ads and AdColony will only provide limited reporting and install-tracking functionality.
+ Please note the completion handler. You should not start requesting ads until it has fired.
+ If there is a configuration error, the set of zones passed to the completion handler will be nil.
+ @param appID The AdColony app ID for your app.
+ @param options (optional) Configuration options for your app.
+ @param completion (optional) A block of code to be executed upon completion of the configuration operation. Dispatched on main thread.
+ @see AdColonyAppOptions
+ @see AdColonyZone
+ */
++ (void)configureWithAppID:(NSString *)appID options:(nullable AdColonyAppOptions *)options completion:(nullable void (^)(NSArray<AdColonyZone *> *zones))completion;
 
 /**
  @abstract Configures AdColony specifically for your app; required for usage of the rest of the API.
@@ -33,25 +52,9 @@ NS_ASSUME_NONNULL_BEGIN
  @param completion (optional) A block of code to be executed upon completion of the configuration operation. Dispatched on main thread.
  @see AdColonyAppOptions
  @see AdColonyZone
+ @deprecated please use configure without zoneIDs
  */
-+ (void)configureWithAppID:(NSString *)appID zoneIDs:(NSArray<NSString *> *)zoneIDs options:(nullable AdColonyAppOptions *)options completion:(nullable void (^)(NSArray<AdColonyZone *> *zones))completion;
-
-/** @name Requesting Ads */
-
-/**
- @abstract Requests an AdColonyInterstitial.
- @discussion This method returns immediately, before the ad request completes.
- If the request is successful, an AdColonyInterstitial object will be passed to the success block.
- If the request is unsuccessful, the failure block will be called and an AdColonyAdRequestError will be passed to the handler.
- @param zoneID The AdColony zone identifier string indicating which zone the ad request is for.
- @param options An AdColonyAdOptions object used to set configurable aspects of the ad request.
- @param success A block of code to be executed if the ad request succeeds. Dispatched on main thread.
- @param failure (optional) A block of code to be executed if the ad request does not succeed. Dispatched on main thread.
- @see AdColonyAdOptions
- @see AdColonyInterstitial
- @see AdColonyAdRequestError
- */
-+ (void)requestInterstitialInZone:(NSString *)zoneID options:(nullable AdColonyAdOptions *)options success:(void (^)(AdColonyInterstitial *ad))success failure:(nullable void (^)(AdColonyAdRequestError *error))failure __attribute__((deprecated("Deprecated in v4.0.0, use delgate object instead of callback blocks.")));
++ (void)configureWithAppID:(NSString *)appID zoneIDs:(NSArray<NSString *> *)zoneIDs options:(nullable AdColonyAppOptions *)options completion:(nullable void (^)(NSArray<AdColonyZone *> *zones))completion __attribute__((deprecated("Deprecated in v4.8.0")));
 
 /**
  @abstract Requests an AdColonyInterstitial.
@@ -99,23 +102,20 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)requestAdViewInZone:(NSString *)zoneID withSize:(AdColonyAdSize)size andOptions:(nullable AdColonyAdOptions *)options viewController:(UIViewController *)viewController andDelegate:(id<AdColonyAdViewDelegate>)delegate;
 
-
 /**
- @abstract Requests an AdColonyNativeAdView.
+ @abstract Request an AdColonyAdView.
  @discussion This method returns immediately, before the ad request completes.
- If the request is successful, an AdColonyNativeAdView object will be passed to the success block.
- If the request is unsuccessful, the failure block will be called and an AdColonyAdRequestError will be passed to the handler.
+ If the request is successful, an AdColonyAdView object will be passed to the delegate adColonyAdViewDidLoad: method.
+ If the request is unsuccessful, an AdColonyAdRequestError object will be passed to the delegate adColonyAdViewDidFailToLoad method.
  @param zoneID The AdColony zone identifier string indicating which zone the ad request is for.
- @param size The desired width and height of the native ad view.
+ @param size The desired size of the banner ad view.
  @param options An AdColonyAdOptions object used to set configurable aspects of the ad request.
- @param viewController Host view controller
- @param success A block of code to be executed if the ad request succeeds. Dispatched on main thread.
- @param failure (optional) A block of code to be executed if the ad request does not succeed. Dispatched on main thread.
+ @param delegate ad view advanced delegate
  @see AdColonyAdOptions
- @see AdColonyNativeAdView
+ @see AdColonyAdView
  @see AdColonyAdRequestError
  */
-+ (void)requestNativeAdViewInZone:(NSString *)zoneID size:(CGSize)size options:(nullable AdColonyAdOptions *)options viewController:(UIViewController *)viewController success:(void (^)(AdColonyNativeAdView *ad))success failure:(nullable void (^)(AdColonyAdRequestError *error))failure __attribute__((deprecated("Deprecated in v3.3.6, Native Ads will be removed in a future release")));
++ (void)requestAdViewInZone:(NSString *)zoneID withSize:(AdColonyAdSize)size options:(nullable AdColonyAdOptions *)options andDelegate:(id<AdColonyAdViewAdvancedDelegate>)delegate;
 
 /** @name Zone */
 
@@ -175,7 +175,7 @@ NS_ASSUME_NONNULL_BEGIN
  @discussion Use this method to send custom messages to the AdColony SDK.
  @param type The type of the custom message. Must be 128 characters or less.
  @param content The content of the custom message. Must be 1024 characters or less.
- @param reply A block of code to be executed when a reply is sent to the custom message.
+ @param reply A block of code to be executed when a reply is sent to the custom message. Will be dispatched on main thread.
  */
 + (void)sendCustomMessageOfType:(NSString *)type withContent:(nullable NSString *)content reply:(nullable void (^)(_Nullable id reply))reply;
 
@@ -212,9 +212,16 @@ NS_ASSUME_NONNULL_BEGIN
 /**
 @abstract Gathers AdColony specific information to be passed into OpenRTB bid request.
 @discussion Gathers AdColony specific information to be passed into OpenRTB bid requests from a mediation setting.
-@param completion A block of code to be executed when collection finishes, with result or error, on calling thread.
+@param completion A block of code to be executed when collection finishes, with result or error, on calling thread or main thread if unable to schedule on calling thread.
 */
-+ (void)collectSignals:(nonnull void (^)(NSString * _Nullable, NSError * _Nullable))completion;
++ (void)collectSignals:(nonnull void (^)(NSString * _Nullable signals, NSError * _Nullable error))completion;
+
+/**
+@abstract Gathers AdColony specific information to be passed into OpenRTB bid request.
+@discussion Gathers AdColony specific information to be passed into OpenRTB bid requests from a mediation setting.
+@param completion A block of code to be executed when collection finishes, with result or error, on target dispatch. If nil dispatch is provided, this method behaves like collectSignals:.
+*/
++ (void)collectSignals:(nonnull void (^)(NSString * _Nullable signals, NSError * _Nullable error))completion targetDispatch:(nullable dispatch_queue_t)dispatch;
 
 @end
 

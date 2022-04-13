@@ -26,8 +26,8 @@
  If your application involves running rewarded or incentivised ads, then you should, in addition to the above events, also listen for the interstitial:(IMInterstitial*)interstitial rewardActionCompletedWithRewards:(NSDictionary*)rewards event and handle it appropriately to unlock rewards for the user of your app.
  */
 #import <Foundation/Foundation.h>
-#import "IMRequestStatus.h"
-#import "IMAdMetaInfo.h"
+#import <InMobiSDK/IMRequestStatus.h>
+#import <InMobiSDK/IMAdMetaInfo.h>
 
 #ifndef INTERSTITIALDELEGATEINCLUDE_H
 #define INTERSTITIALDELEGATEINCLUDE_H

@@ -5,8 +5,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IMUserDataModel.h"
-#import "IMUnifiedIdDelegate.h"
+#import <InMobiSDK/IMUserDataModel.h>
+#import <InMobiSDK/IMUnifiedIdDelegate.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

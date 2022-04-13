@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/AdColony.h</key>
 		<data>
-		DFRe4Sg3BJrxUrx50iwGZJx0Uus=
+		vl81tYufii/8D1AxKacPHGyz7Sw=
 		</data>
 		<key>Headers/AdColonyAdOptions.h</key>
 		<data>
-		ZE6dLr5RX7hSpDbTUITST61F2O0=
+		6RKG7XrJURZYJbykwsS73RDMYA4=
 		</data>
 		<key>Headers/AdColonyAdRequestError.h</key>
 		<data>
@@ -22,15 +22,15 @@
 		</data>
 		<key>Headers/AdColonyAdView.h</key>
 		<data>
-		2tDzasiuIiH/eG4/JR2r7a3vQ1I=
+		LlbLgL75+6g6Q7fFLSJ4TXmc6NQ=
 		</data>
 		<key>Headers/AdColonyAdViewDelegate.h</key>
 		<data>
-		MxJTDpv48kltPCJO1JfSSJMbenc=
+		1ZgRVagJk2s5tNqhlf3BzwdMPiQ=
 		</data>
 		<key>Headers/AdColonyAppOptions.h</key>
 		<data>
-		3yP385d7lKBCRkysmkOGbS68cVg=
+		SIY1ydWGlpwZUeshI5YGTXUTWq0=
 		</data>
 		<key>Headers/AdColonyEventTracker.h</key>
 		<data>
@@ -38,39 +38,35 @@
 		</data>
 		<key>Headers/AdColonyInterstitial.h</key>
 		<data>
-		NL1t7o4BwdUlGUY907TdggDZhTk=
+		zXzN7ztMcq6jv0XDhkdGxN0kx00=
 		</data>
 		<key>Headers/AdColonyInterstitialDelegate.h</key>
 		<data>
 		8KCR3LSx5/wlpYvnIo50izKhftE=
 		</data>
-		<key>Headers/AdColonyNativeAdView.h</key>
-		<data>
-		7diQM3jMfuejiFwVXcHbyvdbAio=
-		</data>
 		<key>Headers/AdColonyOptions.h</key>
 		<data>
-		wrGN82C48phYUH5x7yCYikO8Ikw=
+		ONbSilQyAqQoSsS1WQMDiH1T3yg=
 		</data>
 		<key>Headers/AdColonyPublic.h</key>
 		<data>
-		FxZWKJ4QG4CErMSf/146sh//FFQ=
+		hmWt5Uo1HM92uGnU438H2hviduQ=
 		</data>
 		<key>Headers/AdColonyTypes.h</key>
 		<data>
-		z86apbiMYZctvYVJ06xMzLl+RLQ=
+		j1CJiFoNc4XD1P+ti6WXuvWwKd4=
 		</data>
 		<key>Headers/AdColonyUserMetadata.h</key>
 		<data>
-		hPdnZ+vdmvabHSNc/hGgfbXfACM=
+		F38HXF10IXbrMnGPjKNfROwJhBM=
 		</data>
 		<key>Headers/AdColonyZone.h</key>
 		<data>
-		f5f9VuNE5LoSA4AJcznl6Etg8oU=
+		RYz0NLLzYLM1bxRNny0ogxNcB1c=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dO8GvuGi1tEhkJ7JveVfjTkmmrI=
+		MjlVHbo/aokEyU+74trePXleHgA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -83,22 +79,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DFRe4Sg3BJrxUrx50iwGZJx0Uus=
+			vl81tYufii/8D1AxKacPHGyz7Sw=
 			</data>
 			<key>hash2</key>
 			<data>
-			f0UDZJm51jf5cmnKU2HUsfWBL+tstjJs53P9T7bMyCQ=
+			P6ENDnjnUITstZYYR6vYrc3YVlMTuwXW8jWViQQVbzg=
 			</data>
 		</dict>
 		<key>Headers/AdColonyAdOptions.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZE6dLr5RX7hSpDbTUITST61F2O0=
+			6RKG7XrJURZYJbykwsS73RDMYA4=
 			</data>
 			<key>hash2</key>
 			<data>
-			evQw/OhFcBHuSNQThLAH8vI4UyOqXeZe90qIHsHIACQ=
+			5M0UvPbZNjYLyFI55FtYkiVUg2NNHNiNbQclf4z0LlM=
 			</data>
 		</dict>
 		<key>Headers/AdColonyAdRequestError.h</key>
@@ -127,33 +123,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2tDzasiuIiH/eG4/JR2r7a3vQ1I=
+			LlbLgL75+6g6Q7fFLSJ4TXmc6NQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZoIrF8XgX5AIo38dPhji5YGVFI6S39ygFI0O5dnDOa8=
+			EZ82RSC0gLSrYIRptT977PZsTbWfVWOFsTebt/ouJ2M=
 			</data>
 		</dict>
 		<key>Headers/AdColonyAdViewDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MxJTDpv48kltPCJO1JfSSJMbenc=
+			1ZgRVagJk2s5tNqhlf3BzwdMPiQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			9HhugofD8MimsBp1YK+HXniczyeh1FnVhbu3PsdVBTA=
+			ikfrOKsj+MwyaJAd/iH+7QN4ZxDGcKPjU7gvNtTkRm0=
 			</data>
 		</dict>
 		<key>Headers/AdColonyAppOptions.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3yP385d7lKBCRkysmkOGbS68cVg=
+			SIY1ydWGlpwZUeshI5YGTXUTWq0=
 			</data>
 			<key>hash2</key>
 			<data>
-			fadUK6bC9kWi/L1KJIyplvYXylH/0bFfVcT/yuVWu+s=
+			CQC8Fij/jQTKtLeHkmJTo6QtrsB3gd5Ue58tuYEJjeA=
 			</data>
 		</dict>
 		<key>Headers/AdColonyEventTracker.h</key>
@@ -171,11 +167,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NL1t7o4BwdUlGUY907TdggDZhTk=
+			zXzN7ztMcq6jv0XDhkdGxN0kx00=
 			</data>
 			<key>hash2</key>
 			<data>
-			L8mwcoS2BWl5ZmJ8QBe5lXxIgiWHUsqhnfPoxrUf1QY=
+			+yzUSsMYwqS41ev1au/vEiTG6bUaWtN+VTWfuTRn8XY=
 			</data>
 		</dict>
 		<key>Headers/AdColonyInterstitialDelegate.h</key>
@@ -189,70 +185,59 @@
 			DX57XMMMu7gSnb1t6ApSjSKMYYWG5f0grLgbJfOXYJw=
 			</data>
 		</dict>
-		<key>Headers/AdColonyNativeAdView.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			7diQM3jMfuejiFwVXcHbyvdbAio=
-			</data>
-			<key>hash2</key>
-			<data>
-			9i/5byyPUOG6c6V+RrNmg2jWdNy5DDrbZu+Jwy2VbIY=
-			</data>
-		</dict>
 		<key>Headers/AdColonyOptions.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wrGN82C48phYUH5x7yCYikO8Ikw=
+			ONbSilQyAqQoSsS1WQMDiH1T3yg=
 			</data>
 			<key>hash2</key>
 			<data>
-			4Lh7+3fCLYlCLt69d/GCaosdmGr2TN7bctrAwkdM11Y=
+			9qOL2kbuFwbWXlrOCc7h+MH+nC7vwqFZw9IW9ZTl4TA=
 			</data>
 		</dict>
 		<key>Headers/AdColonyPublic.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FxZWKJ4QG4CErMSf/146sh//FFQ=
+			hmWt5Uo1HM92uGnU438H2hviduQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			dEqhAh4HZx/kvylJm2ZYjiR+17W7td5ucOJydsOOdj4=
+			Iywqq2KCXn7spN/cg6RmH6l6+zC5N16w7zmcDQGxbGM=
 			</data>
 		</dict>
 		<key>Headers/AdColonyTypes.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			z86apbiMYZctvYVJ06xMzLl+RLQ=
+			j1CJiFoNc4XD1P+ti6WXuvWwKd4=
 			</data>
 			<key>hash2</key>
 			<data>
-			RVyoQoW6NZE+s3Izr06NMDz19Ef0wssiDoznn5dTOTY=
+			zCmvdDRrfT4EiIVDp8TPlwTXMDsCARyF7hMGhEweM+Q=
 			</data>
 		</dict>
 		<key>Headers/AdColonyUserMetadata.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hPdnZ+vdmvabHSNc/hGgfbXfACM=
+			F38HXF10IXbrMnGPjKNfROwJhBM=
 			</data>
 			<key>hash2</key>
 			<data>
-			NMMmV+ucnbH/MbgdzLjye6Lp8FoW/4BotyU/wGJ5LAg=
+			6qwbj9pJGa+LhEkv5jE0ds4y1Ap8kZhlvl+mQidfvfM=
 			</data>
 		</dict>
 		<key>Headers/AdColonyZone.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			f5f9VuNE5LoSA4AJcznl6Etg8oU=
+			RYz0NLLzYLM1bxRNny0ogxNcB1c=
 			</data>
 			<key>hash2</key>
 			<data>
-			A3CAX6hxbBIGiekf7LLcCwp4tlNEyfw3HmurVm3CnHo=
+			xvWfkxrPEVNdG99wns+SNhYNe2T95G7zSduR9g4q6UQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

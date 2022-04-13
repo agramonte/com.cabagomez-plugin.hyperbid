@@ -11,11 +11,11 @@
 #import "ALAdService.h"
 #import "ALEventService.h"
 #import "ALVariableService.h"
-#import "ALUserService.h"
 #import "ALSdkConfiguration.h"
 #import "ALErrorCodes.h"
 #import "ALMediationProvider.h"
 #import "ALUserSegment.h"
+#import "ALTargetingData.h"
 #import "MAMediatedNetworkInfo.h"
 #import "MAAdFormat.h"
 
@@ -77,6 +77,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, readonly) ALUserSegment *userSegment;
 
+/**
+ * Targeting Data allows you to provide user or app data that will improve how we target ads.
+ */
+@property (nonatomic, strong, readonly) ALTargetingData *targetingData;
+
 #pragma mark - SDK Services
 
 /**
@@ -90,13 +95,6 @@ NS_ASSUME_NONNULL_BEGIN
  * @return Event service. Guaranteed not to be @c NULL.
  */
 @property (nonatomic, strong, readonly) ALEventService *eventService;
-
-/**
- * The service object, which performs user-related tasks.
- *
- * @return User service. Guaranteed not to be @c NULL.
- */
-@property (nonatomic, strong, readonly) ALUserService *userService;
 
 /**
  * Get an instance of the AppLovin variable service. This service is used to perform various A/B tests that you have set up on your AppLovin dashboard on your

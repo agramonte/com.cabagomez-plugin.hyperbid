@@ -52,9 +52,9 @@
  */
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "IMInterstitialDelegate.h"
-#import "IMCoreConstants.h"
-#import "IMInterstitialPreloadManager.h"
+#import <InMobiSDK/IMInterstitialDelegate.h>
+#import <InMobiSDK/IMCoreConstants.h>
+#import <InMobiSDK/IMInterstitialPreloadManager.h>
 
 #ifndef INTERSTITIALINCLUDE_H
 #define INTERSTITIALINCLUDE_H
@@ -86,7 +86,10 @@
  *The prelaod Manager for Preload flow.
 */
 @property (nonatomic, strong, readonly) IMInterstitialPreloadManager* preloadManager;
-
+/**
+ * contentUrl for OMSDK
+ */
+@property (nonatomic, strong) NSString* contentUrl;
 /**
  * init and new methods are unavailable for this class
  * use "initWithPlacementId:" or "initWithPlacementId:delegate:" method.

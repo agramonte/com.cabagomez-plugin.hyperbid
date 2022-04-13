@@ -7,7 +7,7 @@ Please note:
 3. The iOS plugin with Unity enabled crashes on devices running anything under iOS 10. I have a segment set up for devices under iOS 10 and exclude Unity.   
 4. Tappx only available on Android and only for banner. If you use it and have not registered please use my affiliate link:
 https://dashboard.tappx.com/?h=a386595d4c1005fd21b82c8a44d45766.  
-5. StartIO is now a possible mediation provider on Android and Amazon. If you use it and have not registered please use my affiliate link:
+5. StartIO is now a possible. If you use it and have not registered please use my affiliate link:
 https://portal.start.io/#/signup?referredby=b7977c81-d3e2-4b3d-b539-96dd6cffbcdc&preferredsite=pub&source=directURL 
 
 Integration steps:   
@@ -95,41 +95,56 @@ AdColony add these schemes (iOS only):
 ```   
 
 iOS mediation networks:   
-    HyperBidBid:5.7.79   	
+    HyperBidBid:5.8.13   	
     AdColony:4.7.2     
-    AppLovinSDK:10.3.5     
-    Chartboost / Helium :8.4.2 / 2.3.1   
-    Facebook:6.7.0  
+    AppLovinSDK:11.3.3   
+    Chartboost / Helium :8.5.0 / 2.3.1   
+    Facebook:6.9.0  
     UnityAds:3.7.5    
-    VungleSDK:6.10.3 
+    VungleSDK:6.10.6   
     Inmobi:10.0.0  
     IronSource:7.1.11.0
     GoogleMobileAds:8.10.0   
+    Tapjoy:12.9.1   
+    StartApp:4.7.0   
 
 Android mediation networks:   
-    HyperBid:5.7.78   
+    HyperBid:5.8.13   
     Facebook:6.8.0  
     Admob:19.8.0   
-    Applovin:10.3.4   
-    Unity:3.7.5   
+    Applovin:11.1.3  
+    Unity:4.0.0  
     Chartboost:8.2.1 / Helium:2.2.1   
-    Vungle:6.10.3   
+    Vungle:6.10.4  
     Tappx:3.1.17   
     AdColony:4.6.5      
-    Inmobi:10.0.3   
-    Pangle:3.9.0.5   
-    StartApp:4.8.11   
+    Inmobi:9.2.1   
+    Pangle:4.3.0.4    
+    StartApp:4.9.2   
+    Tapjoy:5.8.13   
 
 Kindle mediation networks:   
-    HyperBid:5.7.78    
-    Facebook:6.8.0  
+    HyperBid:5.8.13  
+    AppLovin:11.1.3   
     Admob:19.8.0   
     Chartboost:8.2.1/Helium:2.2.1      
-    Vungle:6.10.3   
+    Vungle:6.10.4   
     AdColony:4.6.5      
-    Inmobi:10.0.3   
-    Pangle:3.9.0.5   
-    StartApp:4.8.11     
+    Inmobi:9.2.1  
+    Pangle:4.3.0.4   
+    StartApp:4.9.2   
+    Tapjoy:5.8.13    
+    Tappx:3.1.17  
+
+NonGoogle / Samsung
+    HyperBid:5.8.13   
+    Admob:19.8.0      
+    Inmobi:9.2.1  
+    Pangle:4.3.0.4   
+    StartApp:4.9.2   
+    Tapjoy:5.8.13   
+    Huawei:3.4.51.300   
+
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,

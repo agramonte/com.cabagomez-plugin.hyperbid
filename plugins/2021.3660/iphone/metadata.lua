@@ -12,12 +12,6 @@ local metadata =
 			'HyperBidRewardedVideo',
 			'HyperBidSDK',
 			'HyperBidSplash',
-			'HyperBidBanner', 
-			'HyperBidInterstitial',
-			'HyperBidNative',
-			'HyperBidRewardedVideo',
-			'HyperBidSDK',
-			'HyperBidSplash',
 			--AdColony
 			'AdColony',
 			'HyperBidAdColonyAdapter',
@@ -47,11 +41,16 @@ local metadata =
 			'HyperBidAdmobAdapter',
 			--Facebook
 			'FBAudienceNetwork',
-			'FBSDKCoreKit_Basics',
 			'HyperBidFacebookAdapter',
 			--Inmobi
 			'InMobiSDK',
 			'HyperBidInmobiAdapter',
+			--StartApp
+			'StartApp',
+			'HyperBidStartAppAdapter',
+			--Tapjoy
+			'Tapjoy',
+			'HyperBidStartAppAdapter',
 			--Other
 			"Accelerate",
 			"AdSupport",

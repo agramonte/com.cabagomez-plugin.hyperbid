@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  @abstract Interstitial delegate
  @discussion Delegate object that receives interstitial lifecycle notifications.
  */
-@property (nonatomic, nullable, weak) id<AdColonyInterstitialDelegate> delegate;
+@property (nonatomic, nullable, weak) id<AdColonyInterstitialDelegate> delegate __attribute__((deprecated("Deprecated in v4.7.0")));
 
 /**
  @abstract Represents the unique zone identifier string from which the interstitial was requested.
@@ -60,66 +60,6 @@ NS_ASSUME_NONNULL_BEGIN
  Note that canceling interstitials before they finish will diminish publisher revenue.
  */
 - (void)cancel;
-
-/** @name Ad Event Handlers */
-
-/**
- @abstract Sets the block of code to be executed when the interstitial is displayed to the user.
- @discussion Note that the associated code block will be dispatched on the main thread.
- @param open The block of code to be executed.
- */
-- (void)setOpen:(nullable void (^)(void))open __attribute__((deprecated("Deprecated in v4.0.0, use delegate")));
-
-/**
- @abstract Sets the block of code to be executed when the interstitial is removed from the view hierarchy. It's recommended to request a new ad within this callback.
- @discussion Note that the associated code block will be dispatched on the main thread.
- @param close The block of code to be executed.
- */
-- (void)setClose:(nullable void (^)(void))close __attribute__((deprecated("Deprecated in v4.0.0, use delegate")));
-
-/**
- @abstract Sets the block of code to be executed when an interstitial expires and is no longer valid for playback. This does not get triggered when the expired flag is set because it has been viewed. It's recommended to request a new ad within this callback.
- @discussion Note that the associated code block will be dispatched on the main thread.
- @param expire The block of code to be executed.
- */
-- (void)setExpire:(nullable void (^)(void))expire __attribute__((deprecated("Deprecated in v4.0.0, use delegate")));
-
-/**
- @abstract Sets the block of code to be executed when an action causes the user to leave the application.
- @discussion Note that the associated code block will be dispatched on the main thread.
- @param leftApplication The block of code to be executed.
- */
-- (void)setLeftApplication:(nullable void (^)(void))leftApplication __attribute__((deprecated("Deprecated in v4.0.0, use delegate")));
-
-/**
- @abstract Sets the block of code to be executed when the user taps on the interstitial ad, causing an action to be taken.
- @discussion Note that the associated code block will be dispatched on the main thread.
- @param click The block of code to be executed.
- */
-- (void)setClick:(nullable void (^)(void))click __attribute__((deprecated("Deprecated in v4.0.0, use delegate")));
-
-/** @name Videos For Purchase (V4P) */
-
-/**
- @abstract Sets the block of code to be executed when the ad triggers an IAP opportunity.
- @discussion Note that the associated code block will be dispatched on the main thread.
- @param iapOpportunity The block of code to be executed.
- */
-- (void)setIapOpportunity:(nullable void (^)(NSString *iapProductID, AdColonyIAPEngagement engagement))iapOpportunity __attribute__((deprecated("Deprecated in v4.0.0, use delegate")));
-
-/**
- @abstract Sets the block of code to be executed when the interstitial begins playing audio.
- @discussion Note that the associated code block will be dispatched on the main thread.
- @param audioStart The block of code to be executed.
- */
-- (void)setAudioStart:(nullable void (^)(void))audioStart __attribute__((deprecated("Deprecated in v3.3.6, use the open callback")));
-
-/**
- @abstract Sets the block of code to be executed when the interstitial stops playing audio.
- @discussion Note that the associated code block will be dispatched on the main thread.
- @param audioStop The block of code to be executed.
- */
-- (void)setAudioStop:(nullable void (^)(void))audioStop __attribute__((deprecated("Deprecated in v3.3.6, use the close callback")));
 
 @end
 

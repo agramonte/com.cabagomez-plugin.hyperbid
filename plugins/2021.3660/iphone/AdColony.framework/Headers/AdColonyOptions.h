@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  @discussion Configure and set this property to improve ad targeting.
  @see AdColonyUserMetadata
  */
-@property (nonatomic, strong, nullable) AdColonyUserMetadata *userMetadata;
+@property (nonatomic, strong, nullable) AdColonyUserMetadata *userMetadata __attribute__((deprecated("Deprecated in v4.7.0")));
 
 /** @name Setting Options */
 

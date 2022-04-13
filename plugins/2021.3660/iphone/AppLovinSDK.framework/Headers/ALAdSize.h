@@ -27,6 +27,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (class, nonatomic, strong, readonly) ALAdSize *leader;
 
 /**
+ * Represents the size of a 300x250 rectangular advertisement.
+ */
+@property (class, nonatomic, strong, readonly) ALAdSize *mrec;
+
+/**
  * Represents the size of a full-screen advertisement.
  */
 @property (class, nonatomic, strong, readonly) ALAdSize *interstitial;
@@ -36,15 +41,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (class, nonatomic, strong, readonly) ALAdSize *crossPromo;
 
+/**
+ * Represents a native ad which can be integrated seemlessly into the environment of your app.
+ */
+@property (class, nonatomic, strong, readonly) ALAdSize *native;
+
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 
-@end
-
-@interface ALAdSize(ALDeprecated)
-@property (nonatomic, assign, readonly) CGFloat width __deprecated;
-@property (nonatomic, assign, readonly) CGFloat height __deprecated;
-@property (class, nonatomic, strong, readonly) ALAdSize *mrec __deprecated_msg("MRECs have been deprecated and will be removed in a future SDK version.");
 @end
 
 NS_ASSUME_NONNULL_END

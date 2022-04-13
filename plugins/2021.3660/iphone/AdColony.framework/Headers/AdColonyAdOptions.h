@@ -6,6 +6,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  AdColonyAdOptions objects are used to set configurable aspects of an ad session, such as third-party network settings, user metadata, etc.
  Set the properties below to configure a pre-defined ad option. Note that you can also set arbitrary options using the AdColonyOptions API.
+ This class is NOT thread safe.
  */
 @interface AdColonyAdOptions : AdColonyOptions
 

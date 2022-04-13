@@ -1,4 +1,13 @@
-@interface USRVJsonStorage : NSObject
+
+@protocol UADSJsonStorageContentsReader <NSObject>
+- (NSDictionary *)getContents;
+@end
+
+@protocol UADSJsonStorageReader <NSObject>
+- (id)            getValueForKey: (NSString *)key;
+@end
+
+@interface USRVJsonStorage : NSObject<UADSJsonStorageContentsReader, UADSJsonStorageReader>
 
 @property (nonatomic, strong) NSMutableDictionary *storageContents;
 
@@ -6,8 +15,10 @@
 - (id)getValueForKey: (NSString *)key;
 - (BOOL)deleteKey: (NSString *)key;
 - (NSArray *)getKeys: (NSString *)key recursive: (BOOL)recursive;
-- (void)     clearData;
-- (BOOL)     initData;
-- (BOOL)     hasData;
+- (void)          clearData;
+- (BOOL)          initData;
+- (BOOL)          hasData;
+- (void)setContents: (NSDictionary *)contents;
+- (NSDictionary *)getContents;
 
 @end

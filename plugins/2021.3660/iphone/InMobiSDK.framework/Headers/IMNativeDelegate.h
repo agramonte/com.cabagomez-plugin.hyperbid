@@ -24,7 +24,7 @@
  see userWillLeaveApplicationFromNative:(IMNative*)native;
  */
 #import <Foundation/Foundation.h>
-#import "IMRequestStatus.h"
+#import <InMobiSDK/IMRequestStatus.h>
 
 
 @class IMNative;

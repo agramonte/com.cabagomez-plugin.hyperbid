@@ -12,7 +12,6 @@
 #import <AdColony/AdColonyAppOptions.h>
 #import <AdColony/AdColonyEventTracker.h>
 #import <AdColony/AdColonyInterstitial.h>
-#import <AdColony/AdColonyNativeAdView.h>
 #import <AdColony/AdColonyOptions.h>
 #import <AdColony/AdColonyPublic.h>
 #import <AdColony/AdColonyTypes.h>

@@ -6,8 +6,9 @@
 //  Copyright © 2020 AppLovin Corporation. All rights reserved.
 //
 
-#import "MAAdDelegate.h"
 #import "MAAd.h"
+#import "MAAdDelegate.h"
+#import "MAAdRevenueDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

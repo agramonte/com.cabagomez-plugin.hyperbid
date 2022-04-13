@@ -10,6 +10,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface AdColonyZone : NSObject
 
+- (instancetype)init NS_UNAVAILABLE;
+
 /** @name Zone */
 
 /**

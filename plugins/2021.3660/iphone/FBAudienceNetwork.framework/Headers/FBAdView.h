@@ -1,20 +1,4 @@
-// Copyright 2004-present Facebook. All Rights Reserved.
-//
-// You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
-// copy, modify, and distribute this software in source code or binary form for use
-// in connection with the web services and APIs provided by Facebook.
-//
-// As with any software that integrates with the Facebook platform, your use of
-// this software is subject to the Facebook Developer Principles and Policies
-// [http://developers.facebook.com/policy/]. This copyright notice shall be
-// included in all copies or substantial portions of the software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-// FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-// COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-// IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-// CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+// (c) Facebook, Inc. and its affiliates. Confidential and proprietary.
 
 #import <UIKit/UIKit.h>
 
@@ -80,6 +64,11 @@ FB_CLASS_EXPORT
   There is no reason to call this method anymore. Autorefresh is disabled by default.
  */
 - (void)disableAutoRefresh FB_DEPRECATED;
+
+/**
+ Sets the rootViewController.
+ */
+- (void)setRootViewController:(UIViewController *)rootViewController;
 
 /**
   Typed access to the id of the ad placement.
@@ -156,6 +145,34 @@ FB_CLASS_EXPORT
  */
 
 - (void)adView:(FBAdView *)adView setDynamicHeight:(double)dynamicHeight;
+
+/**
+ Sent when the position of an FBAdView is set dynamically.
+
+ @param adView An FBAdView object sending the message.
+ @param dynamicPosition CGPoint that indicates the new point of origin for the adView.
+ */
+
+- (void)adView:(FBAdView *)adView setDynamicPosition:(CGPoint)dynamicPosition;
+
+/**
+ Sent when the origin of an FBAdView is to be changed during an animation lasting a specific
+ amount of time.
+
+ @param position CGPoint specifying the new origin of the FBAdView
+ @param duration CGFloat specifying the duration in seconds of the animation.
+ */
+
+- (void)adView:(FBAdView *)controller animateToPosition:(CGPoint)position withDuration:(CGFloat)duration;
+
+/**
+  Sent after an FBAdView fails to load the fullscreen view of an ad.
+
+ @param adView An FBAdView object sending the message.
+ @param error An error object containing details of the error.
+ */
+
+- (void)adView:(FBAdView *)adView fullscreenDidFailWithError:(NSError *)error;
 
 /**
   Asks the delegate for a view controller to present modal content, such as the in-app

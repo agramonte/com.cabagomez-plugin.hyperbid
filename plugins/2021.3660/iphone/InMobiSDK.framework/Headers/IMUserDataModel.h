@@ -5,7 +5,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IMUserDataTypes.h"
+#import <InMobiSDK/IMUserDataTypes.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Gets a reference to the shared instance of @c [ALIncentivizedInterstitialAd].
  *
  * This wraps the @code +[ALSdk shared] @endcode call, and will only work if you have set your SDK key in @code Info.plist @endcode.
-*/
+ */
 + (ALIncentivizedInterstitialAd *)shared;
 
 /**
@@ -204,24 +204,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init __attribute__((unavailable("Use initWithSdk:, initWithZoneIdentifier:, or [ALIncentivizedInterstitialAd shared] instead.")));
 + (instancetype)new NS_UNAVAILABLE;
-
-@end
-
-@interface ALIncentivizedInterstitialAd(ALDeprecated)
-+ (void)showOverPlacement:(nullable NSString *)placement
-__deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
-+ (void)showOverPlacement:(nullable NSString *)placement andNotify:(nullable id<ALAdRewardDelegate>)adRewardDelegate
-__deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
-+ (void)showOver:(UIWindow *)window placement:(nullable NSString *)placement andNotify:(nullable id<ALAdRewardDelegate>)adRewardDelegate
-__deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
-- (void)showOver:(UIWindow *)window placement:(nullable NSString *)placement andNotify:(nullable id<ALAdRewardDelegate>)adRewardDelegate
-__deprecated_msg("Placements have been deprecated and will be removed in a future SDK version. Please configure zones from the UI and use them instead.");
-- (instancetype)initIncentivizedInterstitialWithSdk:(ALSdk *)sdk __deprecated_msg("Use initWithSdk:, initWithZoneIdentifier: or [ALIncentivizedInterstitialAd shared] instead.");
-
-+ (void)showOver:(UIWindow *)window andNotify:(nullable id<ALAdRewardDelegate>)adRewardDelegate __deprecated_msg("Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use showAndNotify: instead.");
-- (void)showOver:(UIWindow *)window andNotify:(nullable id<ALAdRewardDelegate>)adRewardDelegate __deprecated_msg("Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use showAndNotify: instead.");
-- (void)showOver:(UIWindow *)window renderAd:(ALAd *)ad andNotify:(nullable id<ALAdRewardDelegate>)adRewardDelegate __deprecated_msg("Explicitly passing in an UIWindow to show an ad is deprecated as all cases show over the application's key window. Use showAd:andNotify: instead.");
-@property (nonatomic, copy, nullable, class) NSString *userIdentifier __deprecated_msg("Please use -[ALSdk userIdentifier] instead to properly identify your users in our system. This property is now deprecated and will be removed in a future SDK version.");
 
 @end
 
