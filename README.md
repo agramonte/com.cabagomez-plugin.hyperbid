@@ -95,18 +95,16 @@ AdColony add these schemes (iOS only):
 ```   
 
 iOS mediation networks:   
-    HyperBidBid:5.8.13   	
-    AdColony:4.7.2     
-    AppLovinSDK:11.3.3   
-    Chartboost / Helium :8.5.0 / 2.3.1   
-    Facebook:6.9.0  
-    UnityAds:3.7.5    
-    VungleSDK:6.10.6   
-    Inmobi:10.0.0  
-    IronSource:7.1.11.0
-    GoogleMobileAds:8.10.0   
-    Tapjoy:12.9.1   
-    StartApp:4.7.0   
+    HyperBidBid:5.8.14  	
+    Applovin: 10.3.7
+    Unity: 4.0.0
+    Chartboost: 8.4.2
+    Tapjoy: 12.9.1
+    Vungle: 6.10.6
+    Facebook: 6.5.1
+    Google: afma-sdk-i-v9.1.0
+    Adcolony: 4.7.2.0
+ 
 
 Android mediation networks:   
     HyperBid:5.8.13   
