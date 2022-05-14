@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The underlying waterfall of ad responses.
  */
-@property (nonatomic, strong, readonly, nullable) MAAdWaterfallInfo *waterfall;
+@property (nonatomic, strong, readonly) MAAdWaterfallInfo *waterfall;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)new NS_UNAVAILABLE;
@@ -37,8 +37,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface MAError(ALDeprecated)
-@property (nonatomic, assign, readonly) NSInteger errorCode __deprecated_msg("This property is deprecated and removed in a future SDK version. Please use `-[MAError code]` instead.");
-@property (nonatomic, copy, readonly) NSString *errorMessage __deprecated_msg("This property is deprecated and removed in a future SDK version. Please use `-[MAError message]` instead.");
 @property (nonatomic, copy, readonly, nullable) NSString *adLoadFailureInfo __deprecated_msg("The ad load failure info string is deprecated and removed in a future SDK version. Please use `-[MAError waterfall]` instead.");
 @end
 

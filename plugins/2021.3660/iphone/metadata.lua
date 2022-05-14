@@ -3,7 +3,17 @@ local metadata =
 	plugin =
 	{
 		format = 'staticLibrary',
-		staticLibs = {"bz2","iconv","c++","z","sqlite3","xml2","c++abi","resolv.9","plugin_hyperbid"},
+		staticLibs = {
+			"bz2",
+			"iconv",
+			"c++",
+			"z",
+			"sqlite3",
+			"xml2",
+			"c++abi",
+			"resolv.9",
+			"plugin_hyperbid"
+		},
 		frameworks = {
 			--Core
 			'HyperBidBanner', 
@@ -12,6 +22,9 @@ local metadata =
 			'HyperBidRewardedVideo',
 			'HyperBidSDK',
 			'HyperBidSplash',
+			--Unity
+			'HyperBidUnityAdsAdapter',
+			'UnityAds',
 			--AdColony
 			'AdColony',
 			'HyperBidAdColonyAdapter',
@@ -22,15 +35,9 @@ local metadata =
 			'Chartboost',
 			'HeliumAdapterChartboost',
 			'HyperBidChartboostAdapter',
-			--Unity
-			'UnityAds',
-			'HyperBidUnityAdsAdapter',
 			--Vungle
 			'VungleSDK',
 			'HyperBidVungleAdapter',
-			--IronSource
-			'IronSource',
-			'HyperBidIronSourceAdapter',
 			--GoogleAds
 			'GoogleMobileAds',
 			'GoogleUtilities',
@@ -38,19 +45,15 @@ local metadata =
 			'nanopb',
 			'UserMessagingPlatform',
 			'PromisesObjC',
+			'GoogleAppMeasurementIdentitySupport',
 			'HyperBidAdmobAdapter',
 			--Facebook
 			'FBAudienceNetwork',
+			'FBSDKCoreKit_Basics',
 			'HyperBidFacebookAdapter',
-			--Inmobi
-			'InMobiSDK',
-			'HyperBidInmobiAdapter',
-			--StartApp
-			'StartApp',
-			'HyperBidStartAppAdapter',
 			--Tapjoy
 			'Tapjoy',
-			'HyperBidStartAppAdapter',
+			'HyperBidTapjoyAdapter',
 			--Other
 			"Accelerate",
 			"AdSupport",
@@ -71,7 +74,8 @@ local metadata =
 			"StoreKit",
 			"SystemConfiguration",
 			"UIKit",
-			"WebKit"
+			"WebKit",
+			"VideoToolbox"
 		},
 		usesSwift = true
 	},

@@ -9,7 +9,6 @@
 #import "MAAdFormat.h"
 #import "MAMediatedNetworkInfo.h"
 #import "MAAdWaterfallInfo.h"
-#import "MANativeAd.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,11 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
  * The format of this ad.
  */
 @property (nonatomic, strong, readonly) MAAdFormat *format;
-
-/**
- * The size of the AdView format ad, or @c CGSizeZero otherwise.
- */
-@property (nonatomic, assign, readonly) CGSize size;
 
 /**
  * The ad unit ID for which this ad was loaded.
@@ -46,9 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *networkPlacement;
 
 /**
- * The creative id tied to the ad, if any. You can report creative issues to the corresponding ad network using this id.
- *
- * It may not be available until @c -[MAAdDelegate didDisplayAd:] is called.
+ * The creative ID tied to the ad, if any. It may not be available for some ad networks until the SDK calls @code -[MAAdDelegate didDisplayAd:] @endcode.
  *
  * @see <a href="https://dash.applovin.com/documentation/mediation/ios/testing-networks/creative-debugger#creative-id">MAX Integration Guide ⇒ iOS ⇒ Testing Networks ⇒ Creative Debugger ⇒ Creative ID</a>
  *
@@ -57,29 +49,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly, nullable) NSString *creativeIdentifier;
 
 /**
- * The Ad Review creative id tied to the ad, if any. You can report creative issues to our Ad review team using this id.
- *
- * It may not be available until @c -[MAAdDelegate didDisplayAd:] is called.
- *
- * @since 11.3.0
- */
-@property (nonatomic, copy, readonly, nullable) NSString *adReviewCreativeIdentifier;
-
-/**
- * The ad’s revenue amount, or 0 if no revenue amount exists.
+ * The ad’s revenue amount, or −1 if no revenue amount exists.
  */
 @property (nonatomic, assign, readonly) double revenue;
-
-/**
- * The precision of the revenue value for this ad.
- *
- * Possible values are:
- * - "publisher_defined" - If the revenue is the price assigned to the line item by the publisher.
- * - "exact" - If the revenue is the resulting price of a real-time auction.
- * - "estimated" - If the revenue is the price obtained by auto-CPM.
- * - "undefined" - If we do not have permission from the ad network to share impression-level data.
- */
-@property (nonatomic, copy, readonly) NSString *revenuePrecision;
 
 /**
  * The placement name that you assign when you integrate each ad format, for granular reporting in postbacks (e.g. "Rewarded_Store", "Rewarded_LevelEnd").
@@ -90,11 +62,6 @@ NS_ASSUME_NONNULL_BEGIN
  * The underlying waterfall of ad responses.
  */
 @property (nonatomic, strong, readonly) MAAdWaterfallInfo *waterfall;
-
-/**
- * For Native ads only. Get an instance of the @c MANativeAd containing the assets used to render the native ad view.
- */
-@property (nonatomic, strong, readonly, nullable) MANativeAd *nativeAd;
 
 /**
  * Gets the ad value for a given key.

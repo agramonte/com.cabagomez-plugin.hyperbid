@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * This class defines a format of an ad.
  */
-@interface MAAdFormat : NSObject<NSCopying>
+@interface MAAdFormat : NSObject
 
 /**
  * Represents a 320×50 banner advertisement.
@@ -52,11 +52,6 @@ NS_ASSUME_NONNULL_BEGIN
  * Represents a native advertisement.
  */
 @property (nonatomic, strong, readonly, class) MAAdFormat *native;
-
-/**
- * String representing the name of this ad format. Sample values include "BANNER", "INTER", "REWARDED", etc.
- */
-@property (nonatomic, copy, readonly) NSString *label;
 
 /**
  * The size of the AdView format ad, or @c CGSizeZero otherwise.

@@ -27,11 +27,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (class, nonatomic, strong, readonly) ALAdType *autoIncentivized;
 
-/**
- * Represents a native ad which can be integrated seemlessly into the environment of your app.
- */
-@property (class, nonatomic, strong, readonly) ALAdType *native;
-
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 

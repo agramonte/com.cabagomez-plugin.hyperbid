@@ -41,14 +41,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (class, nonatomic, strong, readonly) ALAdSize *crossPromo;
 
-/**
- * Represents a native ad which can be integrated seemlessly into the environment of your app.
- */
-@property (class, nonatomic, strong, readonly) ALAdSize *native;
-
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 
+@end
+
+@interface ALAdSize(ALDeprecated)
+@property (nonatomic, assign, readonly) CGFloat width __deprecated;
+@property (nonatomic, assign, readonly) CGFloat height __deprecated;
 @end
 
 NS_ASSUME_NONNULL_END
