@@ -1,6 +1,0 @@
-framework module HyperBidUnityAdsAdapter {
-  umbrella header "HyperBidUnityAdsAdapter.h"
-
-  export *
-  module * { export * }
-}

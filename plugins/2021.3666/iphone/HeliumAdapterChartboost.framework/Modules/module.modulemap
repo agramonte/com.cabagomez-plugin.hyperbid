@@ -1,0 +1,6 @@
+framework module HeliumAdapterChartboost {
+  umbrella header "HeliumAdapterChartboost.h"
+
+  export *
+  module * { export * }
+}

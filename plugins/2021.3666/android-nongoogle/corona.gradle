@@ -1,0 +1,73 @@
+ 
+android {
+compileOptions {
+ sourceCompatibility JavaVersion.VERSION_1_8
+ targetCompatibility JavaVersion.VERSION_1_8
+}
+  }
+
+repositories {
+//HyperBid(Core)
+    maven {
+        url "https://hyperbid.jfrog.io/artifactory/sdk"
+    }
+
+    //Pangle
+    maven {
+        url "https://artifact.bytedance.com/repository/pangle"
+    }
+
+    //Tapjoy
+    maven {
+        url "https://sdk.tapjoy.com/"
+    }
+
+    //Huawei
+    maven {
+        url "https://developer.huawei.com/repo/"
+    }
+
+}
+
+dependencies {
+
+   //HyperBid (Necessary)
+    api "com.hyperbid.sdk:core:5.9.51"
+    api "com.hyperbid.sdk:nativead:5.9.51"
+    api "com.hyperbid.sdk:banner:5.9.51"
+    api "com.hyperbid.sdk:interstitial:5.9.51"
+    api "com.hyperbid.sdk:rewardedvideo:5.9.51"
+    api "com.hyperbid.sdk:splash:5.9.51"
+
+    //Androidx (Necessary)
+    api "androidx.appcompat:appcompat:1.4.2"
+
+    
+    //Admob
+    api "com.hyperbid.sdk:adapter-admob:5.9.51"
+    api "com.google.android.gms:play-services-ads:21.0.0"
+    api "com.google.android.gms:play-services-basement:17.6.0"
+
+    //Pangle
+    api "com.hyperbid.sdk:adapter-pangle-nonchina:5.9.51"
+    api "com.pangle.global:ads-sdk:4.3.0.4"
+
+    //Tappx
+    implementation 'com.tappx.sdk.android:tappx-sdk:3.2.6'
+    implementation 'com.tappx.sdk.android:omsdk:1.3.30'
+
+    //Huawei
+    api "com.hyperbid.sdk:adapter-huawei-nonchina:5.9.51"
+    api "com.huawei.hms:ads:3.4.51.300"
+
+    //Tapjoy
+    api "com.hyperbid.sdk:adapter-tapjoy:5.9.51"
+    api "com.tapjoy:tapjoy-android-sdk:12.10.0@aar"
+    api "com.google.android.gms:play-services-ads-identifier:17.1.0"
+
+    //Inmobi
+    api "com.hyperbid.sdk:adapter-inmobi:5.9.51"
+    api 'com.inmobi.monetization:inmobi-ads:10.0.5' 
+    api 'com.google.android.gms:play-services-location:17.1.0'//optional dependency for better targeting
+
+}

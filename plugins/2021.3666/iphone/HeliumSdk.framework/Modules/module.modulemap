@@ -1,0 +1,6 @@
+framework module HeliumSdk {
+  umbrella header "HeliumSdk.h"
+
+  export *
+  module * { export * }
+}

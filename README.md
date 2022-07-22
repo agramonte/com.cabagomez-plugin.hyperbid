@@ -7,8 +7,7 @@ Please note:
 3. The iOS plugin with Unity enabled crashes on devices running anything under iOS 10. I have a segment set up for devices under iOS 10 and exclude Unity.   
 4. Tappx only available on Android and only for banner. If you use it and have not registered please use my affiliate link:
 https://dashboard.tappx.com/?h=a386595d4c1005fd21b82c8a44d45766.  
-5. StartIO is now a possible. If you use it and have not registered please use my affiliate link:
-https://portal.start.io/#/signup?referredby=b7977c81-d3e2-4b3d-b539-96dd6cffbcdc&preferredsite=pub&source=directURL 
+5. Somewhere between Solar2d version .3666 and .3673 the Amazon build options throws a bunch of error. This was tested on the .3666 version for the Amazon build.
 
 Integration steps:   
 1. Register for Hyperbid https://app.hyperbid.com.   
@@ -95,46 +94,37 @@ AdColony add these schemes (iOS only):
 ```   
 
 iOS mediation networks:   
-    HyperBidBid:5.8.13   	
-    AdColony:4.7.2     
-    AppLovinSDK:11.3.3   
-    Chartboost / Helium :8.5.0 / 2.3.1   
-    Facebook:6.9.0  
-    UnityAds:3.7.5    
-    VungleSDK:6.10.6   
-    Inmobi:10.0.0  
-    IronSource:7.1.11.0
-    GoogleMobileAds:8.10.0   
-    Tapjoy:12.9.1   
-    StartApp:4.7.0   
+    HyperBidBid:5.8.14  	
+    Applovin: 10.3.7
+    Unity: 4.0.0
+    Chartboost: 8.4.2
+    Tapjoy: 12.9.1
+    Vungle: 6.10.6
+    Facebook: 6.5.1
+    Google: afma-sdk-i-v9.1.0
+    Adcolony: 4.7.2.0
+ 
 
 Android mediation networks:   
-    HyperBid:5.8.13   
-    Facebook:6.8.0  
-    Admob:19.8.0   
-    Applovin:11.1.3  
-    Unity:4.0.0  
-    Chartboost:8.2.1 / Helium:2.2.1   
-    Vungle:6.10.4  
-    Tappx:3.1.17   
-    AdColony:4.6.5      
-    Inmobi:9.2.1   
-    Pangle:4.3.0.4    
-    StartApp:4.9.2   
-    Tapjoy:5.8.13   
+    HyperBid:5.9.52  
+    Facebook:6.11.0 
+    Admob:20.6.0   
+    Applovin:11.4.2  
+    Unity:4.1.0 
+    Chartboost:8.4.3 / Helium:2.2.1   
+    Vungle:6.11.0  
+    Tappx:3.2.6 
+    AdColony:4.7.1  
+    Tapjoy:12.10.0  
 
 Kindle mediation networks:   
-    HyperBid:5.8.13  
-    AppLovin:11.1.3   
-    Admob:19.8.0   
-    Chartboost:8.2.1/Helium:2.2.1      
-    Vungle:6.10.4   
-    AdColony:4.6.5      
-    Inmobi:9.2.1  
-    Pangle:4.3.0.4   
-    StartApp:4.9.2   
-    Tapjoy:5.8.13    
-    Tappx:3.1.17  
+    HyperBid:5.9.52    
+    Admob:20.4.0   
+    Chartboost:8.4.3/Helium:2.2.1      
+    Vungle:6.11.0    
+    AdColony:4.7.1    
+    Tapjoy:5.9.52    
+    Tappx:3.2.6  
 
 NonGoogle / Samsung
     HyperBid:5.8.13   

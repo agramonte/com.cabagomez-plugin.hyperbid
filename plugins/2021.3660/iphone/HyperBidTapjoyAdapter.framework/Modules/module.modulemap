@@ -1,6 +1,0 @@
-framework module HyperBidTapjoyAdapter {
-  umbrella header "HyperBidTapjoyAdapter.h"
-
-  export *
-  module * { export * }
-}

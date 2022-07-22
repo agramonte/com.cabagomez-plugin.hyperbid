@@ -1,9 +1,0 @@
-framework module Tapjoy {
-    umbrella header "Tapjoy.h"
-
-    export *
-    module * {
-        export *
-    }
-}
-

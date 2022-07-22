@@ -1,6 +1,0 @@
-framework module HyperBidInmobiAdapter {
-  umbrella header "HyperBidInmobiAdapter.h"
-
-  export *
-  module * { export * }
-}

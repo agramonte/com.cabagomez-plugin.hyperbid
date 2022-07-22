@@ -1,6 +1,0 @@
-framework module HyperBidSplash {
-  umbrella header "HyperBidSplash.h"
-
-  export *
-  module * { export * }
-}
